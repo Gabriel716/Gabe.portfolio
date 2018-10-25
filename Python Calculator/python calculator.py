@@ -65,6 +65,7 @@ def check_math(test_valuce, operator, num1, num2):
         checked_value= num1 / num2
     elif operator == "*":
         checked_value= num1 * num2
+    return checked_value
     
 
 
@@ -93,7 +94,9 @@ def main():
     else:
         display_output("This is not one of the correct operators")
         main()
-    if check_math(test_value, operator, num1, num2):
+    checkedvalue=check_math(test_value, operator, num1, num2)
+    
+    if test_value == checkedvalue:
         display_output("After a second check the correct answer is" +str(test_value)
     else:
         display_output("something in the calculation was wrong try it again")

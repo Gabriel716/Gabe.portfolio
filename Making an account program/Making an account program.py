@@ -6,7 +6,7 @@
 def check_account(user_name, password):
     username=user_name
     password=password
-    enter_username=input("Enter your password")
+    enter_username=input("Enter your user name")
     enter_password=input("Enter your password")
     if username == enter_username and password == enter_password or enter_username =="admin":
         return True
@@ -32,7 +32,7 @@ def get_password():
 
 
 def get_username():
-    print("Your password must contain numbers and letters\n can only contain 10 characters \n must contain at least 3 characters")
+    print("Your user name must contain numbers and letters\n can only contain 10 characters \n must contain at least 3 characters")
     username=input("Enter your user name")
     if username.isalpha() and len(username)>=3 and len(username)<= 10:
         print("Your user name is set")
